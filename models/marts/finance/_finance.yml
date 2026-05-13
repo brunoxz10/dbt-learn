@@ -1,0 +1,8 @@
+models:
+  - name: fct_orders
+    description: orders tables with customer and payment information
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
