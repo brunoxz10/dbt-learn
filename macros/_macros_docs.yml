@@ -1,0 +1,22 @@
+macros:
+  - name: grant_select
+    description: "Generate a SQL GRANT statement to give SELECT permission for a set of tables and views to a specified role for a specified database."
+    config:
+      docs:
+        show: true
+      meta:
+        owner: analytics
+    arguments:
+      - name: schema
+        description: "The name of the schema to grant SELECT permissions on."
+        type: string
+      - name: role
+        description: "The name of the role to grant SELECT permissions on."
+        type: string
+      - name: database
+        description: "The name of the database to grant SELECT permissions on."
+        type: string
+    # returns: "A SQL GRANT statement as a string"
+    # examples:
+    #   - description: "Grant SELECT permission on 'my_schema' to 'my_role'"
+    #     code: "{{ grant_select('my_schema', 'my_role') }}"
